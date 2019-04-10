@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "file": "ng-lightools-breadcrumbs.js",
+  "sources": [
+    "ng://@ng-lightools/breadcrumbs/out/breadcrumbs.module.ts",
+    "ng://@ng-lightools/breadcrumbs/out/breadcrumbs/breadcrumbs.component.ts"
+  ],
+  "sourcesContent": [
+    "import {NgModule} from '@angular/core';\nimport {CommonModule} from '@angular/common';\nimport {BreadcrumbsComponent} from './breadcrumbs/breadcrumbs.component';\n\n@NgModule({\n  imports: [\n    CommonModule\n  ],\n  declarations: [\n    BreadcrumbsComponent\n  ],\n  exports: [\n    BreadcrumbsComponent\n  ]\n})\nexport class BreadcrumbsModule {\n}\n",
+    "import {Component, OnInit} from '@angular/core';\n\n@Component({\n  selector: 'app-breadcrumbs',\n  template: `<p>\n  breadcrumbs works!\n</p>\n`,\n  styles: [``]\n})\nexport class BreadcrumbsComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit() {\n  }\n\n}\n"
+  ],
+  "names": [],
+  "mappings": ";;;ACAA;IAYE;KAAiB;IAEjB,uCAAQ,GAAR;KACC;;;;IAbH,EAAA,IAAA,EAAC,SAAS,EAAV,IAAA,EAAA,CAAW;gBACT,QAAQ,EAAE,iBAAiB;gBAC3B,QAAQ,EAAE,mCAGX;gBACC,MAAM,EAAE,CAAC,EAAE,CAAC;aACb,EAAD,EAAA;;;ADTA;IAAA;;;;;IAIA,EAAA,IAAA,EAAC,QAAQ,EAAT,IAAA,EAAA,CAAU;gBACR,OAAO,EAAE;oBACP,YAAY;iBACb;gBACD,YAAY,EAAE;oBACZ,oBAAoB;iBACrB;gBACD,OAAO,EAAE;oBACP,oBAAoB;iBACrB;aACF,EAAD,EAAA;;;;;"
+}
