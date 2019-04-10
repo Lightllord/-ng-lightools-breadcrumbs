@@ -1,3 +1,18 @@
-<p>
-  breadcrumbs works!
-</p>
+<div class="inbuilt light-breadcrumbs" *ngIf="!crumps || !crumps.length">
+  <ng-container *ngFor="let breadcrumb of breadcrumbs; let ind = index">
+    <div *ngIf="divider && ind" class="light-breadcrumbs-divider">{{divider}}</div>
+    <div routerLinkActive="active" class="light-breadcrumbs-item">
+      <a [routerLink]="breadcrumb.url">{{ breadcrumb.label }}</a>
+    </div>
+  </ng-container>
+</div>
+
+<div class="light-breadcrumbs" *ngIf="crumps || crumps.length">
+  <ng-container routerLinkActive="active" *ngFor="let breadcrumb of breadcrumbs">
+    <ng-container class="light-breadcrumbs-item"
+                  *ngFor="let crump of crumps; let i = index"
+                  [ngTemplateOutlet]="crump"
+                  [ngTemplateOutletContext]="{$implicit: breadcrumb}">
+    </ng-container>
+  </ng-container>
+</div>

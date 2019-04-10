@@ -1,0 +1,32 @@
+.inbuilt.light-breadcrumbs {
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  background-color: rgba(229, 232, 235, 0.9);
+  border-bottom: rgba(229, 232, 235, 1);;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem 1rem;
+  list-style: none;
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.inbuilt.light-breadcrumbs > .light-breadcrumbs-item > a {
+  color: rgba(30, 94, 160, 0.9);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.inbuilt.light-breadcrumbs > .light-breadcrumbs-item.active > a {
+  color: rgba(30, 94, 160, 1);
+}
+
+.inbuilt.light-breadcrumbs > .light-breadcrumbs-item.active > a:hover {
+  text-decoration: underline;
+}
+
+.inbuilt.light-breadcrumbs > .light-breadcrumbs-divider {
+  color: rgb(15, 45, 82);
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
