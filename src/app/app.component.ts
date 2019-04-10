@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TeldaNgLocksService} from 'lib';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,14 @@ import {TeldaNgLocksService} from 'lib';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  param;
 
-  constructor(locks: TeldaNgLocksService) {
-    locks.test();
+  constructor(private router: Router) {
   }
 
+  toComp1() {
+    if (this.param) {
+      this.router.navigate(['comp1', {param: this.param}]);
+    }
+  }
 }
