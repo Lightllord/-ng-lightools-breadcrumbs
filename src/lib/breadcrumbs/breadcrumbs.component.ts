@@ -3,7 +3,7 @@ import {ActivatedRoute, NavigationEnd, Params, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
 import {cloneDeep, isEmpty} from 'lodash';
 
-interface IBreadcrumb {
+export interface IBreadcrumb {
   label: string;
   queryParams?: Params;
   matrixParams?: Params;

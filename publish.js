@@ -22,3 +22,6 @@ const resultPackageJson = {
 resultPackageJson.peerDependencies = projectPackageJson.dependencies;
 
 fs.writeFileSync(libPackagePath + 'package.json', JSON.stringify(resultPackageJson) + '\n', null, '\t');
+fs.copyFile('./README.md', libPackagePath + 'README.md', (err) => {
+  if (err) throw err;
+});
