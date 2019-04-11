@@ -56,12 +56,12 @@ It'll allow you to navigate via breadcrumbs without loosing matrix params which 
 If you are going to draw the BC by yourself:
 
 ```html
-  <app-breadcrumbs>
+  <light-breadcrumbs>
     <ng-template let-item="item">
       <p style="color: red">{{item.label}}</p>
       {{item | json}}
     </ng-template>
-  </app-breadcrumbs>
+  </light-breadcrumbs>
 ```
 
 `item` is a `IBreadcrumb`
