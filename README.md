@@ -100,6 +100,6 @@ const appRoutes: Routes = [{
 }]
 ```
 
-Cause the route1 is like the route2 (path = `/path1`) the title in breadcrumbs might repeat.
+Cause the route1 is like the route2 (path = `/path1`) the title in breadcrumbs might repeats.
 
 _Just specify title by `null` at any route that you don't want to see in breadcrumbs_
