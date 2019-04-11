@@ -12,7 +12,7 @@ export interface IBreadcrumb {
 }
 
 @Component({
-  selector: 'app-breadcrumbs',
+  selector: 'light-breadcrumbs',
   templateUrl: './breadcrumbs.component.html',
   styleUrls: ['./breadcrumbs.component.css']
 })
