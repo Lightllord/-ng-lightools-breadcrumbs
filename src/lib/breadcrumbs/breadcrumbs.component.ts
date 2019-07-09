@@ -42,7 +42,7 @@ export class BreadcrumbsComponent {
     // добавляем урлку по path роута
     const tempUrl = route.snapshot.url.map(segment => segment.path).join('/');
     if (tempUrl) {
-      url.push(tempUrl);
+      url.push(...tempUrl.split('/'));
     }
 
     // смотрим и добавляем только те матричные параметры,
