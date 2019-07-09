@@ -6,6 +6,7 @@ import {Comp1Component} from './comp1/comp1.component';
 import {Comp2Component} from './comp2/comp2.component';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import {Comp3Component} from './comp3/comp3.component';
 
 const appRoutes: Routes = [
   {
@@ -22,7 +23,14 @@ const appRoutes: Routes = [
         data: {
           title: 'Компонент2'
         }
-      }
+      },
+      {
+        path: ':id',
+        component: Comp3Component,
+        data: {
+          title: 'Тестовый компонент'
+        }
+      },
     ]
   },
   {
@@ -35,6 +43,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     Comp1Component,
+    Comp3Component,
     Comp2Component
   ],
   imports: [
