@@ -21,7 +21,8 @@ const appRoutes: Routes = [
         path: 'comp2',
         component: Comp2Component,
         data: {
-          title: 'Компонент2'
+          title: 'Компонент2',
+          link: 'comp1/3'
         }
       },
       {

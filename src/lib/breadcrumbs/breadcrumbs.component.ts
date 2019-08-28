@@ -37,6 +37,7 @@ export class BreadcrumbsComponent {
   private getBreadcrumbs(route: ActivatedRoute, url: any[] = ['/']) {
     const ROUTE_DATA_BREADCRUMB = 'title';
     const ROUTE_DATA_MATRIX_PARAMS = 'matrixParams';
+    const ROUTE_DATA_LINK = 'link';
     const ROUTE_DATA_TITLES = 'titles';
 
     // добавляем урлку по path роута
@@ -85,6 +86,10 @@ export class BreadcrumbsComponent {
           });
         }
       }
+    }
+    if (route.snapshot.data[ROUTE_DATA_LINK]) {
+      url = [];
+      url.push(...route.snapshot.data[ROUTE_DATA_LINK].split('/'));
     }
     if (!found && route.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB) && route.snapshot.data[ROUTE_DATA_BREADCRUMB]) {
       let brdc: IBreadcrumb = {
