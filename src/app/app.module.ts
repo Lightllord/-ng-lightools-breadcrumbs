@@ -23,7 +23,33 @@ const appRoutes: Routes = [
         data: {
           title: 'Компонент2',
           link: 'comp1/3'
-        }
+        },
+        children: [
+          {
+            path: 'comp3',
+            component: Comp3Component,
+            data: {
+              title: 'Провер очка',
+              link: 'comp2'
+            },
+            children: [
+              {
+                path: 'comp4',
+                component: Comp3Component,
+                data: {
+                  title: 'Корректная ссылка'
+                }
+              }
+            ]
+          },
+          {
+            path: 'comp5',
+            component: Comp3Component,
+            data: {
+              title: 'Компонент 5'
+            }
+          }
+        ]
       },
       {
         path: ':id',
