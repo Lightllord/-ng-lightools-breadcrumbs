@@ -14,4 +14,12 @@ export class Comp2Component implements OnInit {
   ngOnInit() {
     console.log(this.route);
   }
+
+  goToChild() {
+    this.router.navigate([`comp5`], {relativeTo: this.route});
+  }
+
+  goToDblLinkChild() {
+    this.router.navigate([`comp3/comp4`], {relativeTo: this.route});
+  }
 }

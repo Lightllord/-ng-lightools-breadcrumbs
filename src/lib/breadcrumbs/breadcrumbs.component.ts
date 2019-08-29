@@ -34,11 +34,18 @@ export class BreadcrumbsComponent {
 
   }
 
+  private tempUrl: any;
   private getBreadcrumbs(route: ActivatedRoute, url: any[] = ['/']) {
     const ROUTE_DATA_BREADCRUMB = 'title';
     const ROUTE_DATA_MATRIX_PARAMS = 'matrixParams';
     const ROUTE_DATA_LINK = 'link';
     const ROUTE_DATA_TITLES = 'titles';
+
+    // восстанавливаем URL, если до этого он был в ручную установлен у родителя
+    if (route.parent && route.parent.snapshot.data[ROUTE_DATA_LINK]) {
+      url = this.tempUrl;
+      this.tempUrl = [];
+    }
 
     // добавляем урлку по path роута
     const tempUrl = route.snapshot.url.map(segment => segment.path).join('/');
@@ -88,8 +95,9 @@ export class BreadcrumbsComponent {
       }
     }
     if (route.snapshot.data[ROUTE_DATA_LINK]) {
+      this.tempUrl = url; // запоминаем URL для его последующего восстановления
       url = [];
-      url.push(...route.snapshot.data[ROUTE_DATA_LINK].split('/'));
+      url.push(...route.snapshot.data[ROUTE_DATA_LINK].split('/')); // записываем ссылку, установленную вручную
     }
     if (!found && route.snapshot.data.hasOwnProperty(ROUTE_DATA_BREADCRUMB) && route.snapshot.data[ROUTE_DATA_BREADCRUMB]) {
       let brdc: IBreadcrumb = {
