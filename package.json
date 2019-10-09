@@ -1,6 +1,6 @@
 {
   "name": "@ng-lightools/breadcrumbs",
-  "version": "5.1.2",
+  "version": "5.1.4",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
